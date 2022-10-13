@@ -9,4 +9,8 @@ class Absen extends Model
 {
     use HasFactory;
     protected $table = "absen";
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
