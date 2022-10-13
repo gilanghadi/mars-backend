@@ -2,9 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AbsenController;
-use App\Http\Controllers\JabatanController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Api\AbsenController;
+use App\Http\Controllers\Api\JabatanController;
+use App\Http\Controllers\Api\UserController;
 
 /*
 |--------------------------------------------------------------------------
