@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Absen;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class AbsenController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +14,7 @@ class AbsenController extends Controller
      */
     public function index()
     {
-        return Absen::with('user')->get();
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return User::with(['absen', 'jabatan'])->get();
     }
 
     /**
@@ -41,21 +31,10 @@ class AbsenController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Absen  $absen
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Absen $absen)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Absen  $absen
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Absen $absen)
+    public function show($id)
     {
         //
     }
@@ -64,10 +43,10 @@ class AbsenController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Absen  $absen
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Absen $absen)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +54,10 @@ class AbsenController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Absen  $absen
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Absen $absen)
+    public function destroy($id)
     {
         //
     }

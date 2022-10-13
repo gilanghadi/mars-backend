@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Jabatan extends Model
 {
     use HasFactory;
-    protected $table = "jabatan";
 
     public function user(){
         return $this->hasMany(User::class);
